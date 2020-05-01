@@ -7,43 +7,70 @@ DoublyLL<T>::DoublyLL()
 }
 
 template <typename T>
-T* DoublyLL<T>::getHead();
+T* DoublyLL<T>::getHead() {
+	return head;
+}
 
 template <typename T>
-T* DoublyLL<T>::getTail();
+T* DoublyLL<T>::getTail() {
+	return tail;
+}
+
 
 template <typename T>
-int DoublyLL<T>::getSize();
+int DoublyLL<T>::getSize() {
+	return size;
+}
 
 template <typename T>
-void DoublyLL<T>::addNodeAsHead(T* node);
+void DoublyLL<T>::addNodeAsHead(T* node) {
+
+}
 
 template <typename T>
-void DoublyLL<T>::addNodeAsTail(T* node);
+void DoublyLL<T>::addNodeAsTail(T* node) {
+
+}
 
 template <typename T>
-void DoublyLL<T>::push(T* new_node);
+void DoublyLL<T>::push(T* new_node) {
+	
+}
 
 template <typename T>
-T* DoublyLL<T>::pop();
+T* DoublyLL<T>::pop() {
+	return head;
+}
 
 template <typename T>
-T* DoublyLL<T>::peek();
+T* DoublyLL<T>::peek() {
+	return head;
+}
 
 template <typename T>
-void DoublyLL<T>::enqueue(T* new_node);
+void DoublyLL<T>::enqueue(T* new_node) {
+
+}
 
 template <typename T>
-T* DoublyLL<T>::dequeue();
+T* DoublyLL<T>::dequeue() {
+	return head;
+}
 
 template <typename T>
-T* DoublyLL<T>::get(int index);
+T* DoublyLL<T>::get(int index) {
+	return head;
+}
 
 template <typename T>
-void DoublyLL<T>::printList();
+void DoublyLL<T>::printList() {
+
+}
 
 template <typename T>
-void DoublyLL<T>::printListBackwards();
+void DoublyLL<T>::printListBackwards() {
+
+}
 
 template <typename T>
 DoublyLL<T>::~DoublyLL()

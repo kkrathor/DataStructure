@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "NodeLL.h"
 #include <string>
+#include <sstream>
 
 
 template <typename T>
@@ -15,13 +16,15 @@ NodeLL<T>::NodeLL(T data) {
 
 template <typename T>
 T NodeLL<T>::getData() {
-	
+	return this->data;
 };
 
 template <typename T>
 std::string NodeLL<T>::toString() {
-	return "";
-};
+	std::stringstream s;
+	s << this->getData;
+	return s.str(); 
+}
 
 template <typename T>
 NodeLL<T>::~NodeLL()

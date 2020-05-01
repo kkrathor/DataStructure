@@ -2,10 +2,6 @@
 
 #include "NodeLL.h"
 
-/* Steps: 
-	1) Node Creation
-	2) Node 
-*/
 template <typename T>
 class DoublyLL
 {	
@@ -30,11 +26,6 @@ public:
 	T* get(int index);
 	void printList();
 	void printListBackwards();
-	~MyList();
-
-	~DoublyLL();
-	void clear() {
-
-	}
+	~DoublyLL();	
 };
 

@@ -11,8 +11,8 @@ public:
 	T* prev;
 	NodeLL(T data);
 	NodeLL();
-	//T getData();
-	//string toString();
+	T getData();
+	std::string toString();
 	~NodeLL();
 };
 

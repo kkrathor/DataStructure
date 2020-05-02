@@ -25,20 +25,35 @@ int DoublyLL<T>::getSize() {
 
 template <typename T>
 void DoublyLL<T>::addNodeAsHead(T* node) {
-	
-	node->next = this->head; 
-	head->prev = node; 
-	head = node;
+	node->next = node->prev = nullptr;
+
+	if (this->head == nullptr) {
+		this->head = node; 
+		this->tail = this->head;
+	}
+	else {
+		node->next = this->head;
+		head->prev = node;
+		head = node;
+	}
 
 	this->size += 1;
 }
 
 template <typename T>
 void DoublyLL<T>::addNodeAsTail(T* node) {
-	tail->next = node; 
-	node->prev = tail; 
-	return tail; 
-	this->size += 1; 
+	node->next = node->prev = nullptr;
+
+	if (this->head == nullptr) {
+		this->head = node;
+		this->tail = this->head;	
+	}
+	else {
+		tail->next = node;
+		node->prev = tail;
+	
+	}
+	this->size += 1;
 }
 
 template <typename T>
@@ -48,10 +63,10 @@ void DoublyLL<T>::push(T* new_node) {
 
 template <typename T>
 T* DoublyLL<T>::pop() {
-	T* myNode; 
-	myNode = tail; 
-	this->tail = tail->prev; 
-	this->next = nullptr; 
+	T* myNode = this->tail; 
+	//this->tail = this->tail->prev; 
+	this->tail->next = nullptr; 
+	this->size -= 1; 
 	return myNode; 
 }
 
